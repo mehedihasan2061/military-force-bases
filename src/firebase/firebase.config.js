@@ -4,14 +4,16 @@ import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+// console.log("inside firebase config",import.meta.env.VITE_PASS);
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNLEkym-DsozEpeMIi7vMUB8Y4SzNlaCw",
-  authDomain: "government-and-public-military.firebaseapp.com",
-  projectId: "government-and-public-military",
-  storageBucket: "government-and-public-military.appspot.com",
-  messagingSenderId: "547696877470",
-  appId: "1:547696877470:web:612d7f13ecd8bb798bc08f",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MSAGEINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

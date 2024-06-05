@@ -2,12 +2,14 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa6";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
 
     const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [loginError,setLoginError]=useState("")
   const location = useLocation()
   // console.log(location.state);
   const navigate=useNavigate()
@@ -19,10 +21,16 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
               console.log(result.user)
+              Swal.fire({
+                title: "User Login Successfully",
+                text: "You clicked the button!",
+                icon: "success",
+              });
               navigate(location?.state ? location.state:"/")
             })
             .catch(error => {
-            console.log(error);
+              console.log(error);
+              setLoginError(error.message)
         })
     }
 
@@ -30,6 +38,11 @@ const Login = () => {
         googleLogin()
             .then(result => {
               console.log(result.user);
+               Swal.fire({
+                 title: "User Login Successfully",
+                 text: "You clicked the button!",
+                 icon: "success",
+               });
               navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
@@ -39,6 +52,11 @@ const Login = () => {
     const handleGithubLogin = () => {
         githubLogin()
           .then((result) => {
+             Swal.fire({
+               title: "User Login Successfully",
+               text: "You clicked the button!",
+               icon: "success",
+             });
             console.log(result.user);
             navigate(location?.state ? location.state : "/");
           })
@@ -48,12 +66,12 @@ const Login = () => {
     }
     return (
       <div>
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen my-16">
           <div className="hero-content flex-col ">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl font-bold">Login Now!</h1>
             </div>
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card shrink-0 w-full max-w-sm shadow-2xl ">
               <form onSubmit={handleLogin} className="card-body">
                 <div className="form-control">
                   <label className="label">
@@ -88,6 +106,11 @@ const Login = () => {
                         onClick={() => setShowPassword(!showPassword)}
                       ></FaEye>
                     )}
+                  </div>
+                  <div>
+                    {
+                      loginError && <p className="text-red-600 font-bold">{loginError}</p>
+                    }
                   </div>
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">

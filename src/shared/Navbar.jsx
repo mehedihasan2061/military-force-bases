@@ -6,11 +6,11 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = () => {
     const links = <>
      <li><NavLink to="/">Home</NavLink></li>
-     {/* <li><NavLink to="/military">Military</NavLink></li> */}
+     
      <li><NavLink to="/achieve">Achieve</NavLink></li>
-     <li><NavLink to="/about">About</NavLink></li>
+     {/* <li><NavLink to="/about">About</NavLink></li> */}
      <li><NavLink to="/faq">FAQ</NavLink></li>
-     {/* <li><NavLink to="/login">Login</NavLink></li> */}
+     <li><NavLink to="/contact">Contact</NavLink></li>
   </>
   const { user,logOut } = useContext(AuthContext)
   
@@ -25,7 +25,7 @@ const Navbar = () => {
   }
     return (
       <div>
-        <div className="navbar bg-base-100">
+        <div className="navbar  bg-base-200 w-[90%] mx-auto mb-16 rounded-lg p-4">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -49,12 +49,14 @@ const Navbar = () => {
                 </svg>
               </div>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <a className="btn btn-ghost text-xl font-bold text-orange-700">
+              Military Portal
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
-          <p className="text-green-600 font-bold">{user && user.email}</p>
+
           <div className="navbar-end">
             <div className="dropdown dropdown-end">
               <div
@@ -80,6 +82,13 @@ const Navbar = () => {
                 <li>
                   <a className="justify-between font-bold">
                     {user && user.displayName}
+                  </a>
+                </li>
+                <li>
+                  <a className="justify-between font-bold">
+                    <p className="text-green-600 text-[14px] ">
+                      {user && user.email}
+                    </p>
                   </a>
                 </li>
                 <li>

@@ -3,6 +3,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
+import Swal from "sweetalert2";
+
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -24,24 +26,33 @@ const Register = () => {
       console.log(name, photoUrl, email, password, confirmPassword);
       setRegisterError("")
       if (password.length < 6) {
+         
         setRegisterError("Please Provide Must Be 6 Character")
         return
       }
       if (!/[a-z]/.test(password)) {
+        
         setRegisterError("Please provide at least one lowercase")
         return
       }
       if (!/[A-Z]/.test(password)) {
+        
         setRegisterError("Please provide at least one Uppercase")
         return
       }
       if (password != confirmPassword) {
+        
         setRegisterError("Password did not match")
         return
       }
         
         createUser(email, password)
-            .then(() => {
+          .then(() => {
+              Swal.fire({
+                title: "user register successfully",
+                text: "You clicked the button!",
+                icon: "success",
+              });
               updateUserProfile(name, photoUrl)
                .then(() => {
           // Profile updated!
@@ -64,7 +75,7 @@ const Register = () => {
   // console.log(success);
     return (
       <div>
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen my-16">
           <div className="hero-content flex-col ">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl font-bold">Register Now!</h1>
@@ -157,6 +168,9 @@ const Register = () => {
                     )}
                   </div>
                 </div>
+                {registerError && (
+                  <p className="text-red-600 font-bold">{registerError}</p>
+                )}
                 <p>
                   Already have an account ?{" "}
                   <Link className="text-blue-600 font-bold" to="/login">
@@ -164,12 +178,9 @@ const Register = () => {
                   </Link>
                 </p>
                 <div className="form-control mt-6">
-                  <button  className="btn btn-primary">
-                    Register
-                  </button>
+                  <button className="btn btn-primary">Register</button>
                   {/* <ToastContainer /> */}
                 </div>
-                {registerError && <p>{registerError}</p>}
               </form>
             </div>
           </div>

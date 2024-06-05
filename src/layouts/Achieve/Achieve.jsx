@@ -6,8 +6,8 @@ const Achieve = () => {
     const achieves = useLoaderData()
     console.log(achieves);
     return (
-      <div>
-        <h1 className="text-center text-3xl font-bold bg-green-500 text-white p-6 rounded-t-xl">
+      <div className="w-[90%] mx-auto">
+        <h1 className="text-center md:text-3xl font-bold bg-green-500 text-white p-6 rounded-t-xl">
           Banglades Defence Sports Achievemenet
         </h1>
         <p className="text-center text-xl bg-gray-200 px-6 pb-6 rounded-b-xl font-semibold">
@@ -27,7 +27,6 @@ const Achieve = () => {
           {achieves.map((achieve) => (
             <AchieveCard key={achieve.id} achieve={achieve}></AchieveCard>
           ))}
-          
         </div>
       </div>
     );

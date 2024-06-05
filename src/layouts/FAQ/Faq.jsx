@@ -1,9 +1,15 @@
+import { Helmet } from "react-helmet";
 import faq from "../../assets/faq-templates-880x440.png"
 
 const Faq = () => {
     return (
       <div>
-        <div className="flex justify-between bg-cyan-50 text-amber-800 w-[80%] mx-auto p-6 rounded-xl  my-16">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>FAQ - Bangladesh Defence Portal</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+        <div className="flex justify-between bg-cyan-50 text-amber-800 w-[90%] mx-auto p-6 rounded-xl  ">
           {/* <div className="w-1/2">
             <h1 className="text-4xl font-bold text-center bg-gray-50 p-6 rounded-xl">FAQ</h1>
             <p>
@@ -26,7 +32,8 @@ const Faq = () => {
                 Frequently Asked Questions
               </h2>
               <p className="mt-4 mb-8 text-center dark:text-gray-600">
-                Some information about Bangladesh Defense Force is given below.....
+                Some information about Bangladesh Defense Force is given
+                below.....
               </p>
               <div className="space-y-4">
                 <details className="w-full border rounded-lg">

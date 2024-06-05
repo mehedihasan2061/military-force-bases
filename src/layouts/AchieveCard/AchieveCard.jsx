@@ -1,13 +1,19 @@
 import PropTypes from "prop-types";
 // import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const AchieveCard = ({ achieve }) => {
   const { image, title, name, description, game_name, prize, time } = achieve;
 
   return (
     <div>
-      <div className="hero  bg-gray-50 my-6 p-4 rounded-xl">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Achieve - Bangladesh Defence Portal</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <div className="hero  bg-gray-50 my-6 p-4 rounded-xl ">
         <div
           className="hero-content flex-col lg:flex-row "
           data-aos="fade-up"
@@ -21,9 +27,9 @@ const AchieveCard = ({ achieve }) => {
         >
           <img src={image} className=" rounded-lg shadow-2xl" />
           <div>
-            <h1 className="text-4xl my-3 font-bold">{game_name}</h1>
-            <h1 className="text-2xl my-3 font-bold">{name}</h1>
-            <h1 className="text-2xl my-3 font-bold">{title}</h1>
+            <h1 className="md:text-4xl my-3 font-bold">{game_name}</h1>
+            <h1 className="md:text-2xl my-3 font-bold">{name}</h1>
+            <h1 className="md:text-2xl my-3 font-bold">{title}</h1>
             <div className="flex gap-12">
               <p className="font-bold ">Prize: {prize}</p>
               <p className="font-bold ">Date: {time}</p>

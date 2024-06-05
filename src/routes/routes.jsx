@@ -9,6 +9,7 @@ import Achieve from "../layouts/Achieve/Achieve";
 import Military from "../Pages/Military/Military";
 import PrivateRoute from "../ProtectedRoute/PrivateRoute";
 import Faq from "../layouts/FAQ/Faq";
+import Contact from "../Pages/Contact/Contact";
 
 
 
@@ -42,12 +43,16 @@ const router = createBrowserRouter([
             <Achieve></Achieve>
           </PrivateRoute>
         ),
-        loader: () => fetch("achieve.json"),
+        loader: () => fetch("../achieve.json"),
       },
       {
         path: "/military/:id",
-        element: <Military></Military>,
-        loader: ({ params }) => fetch(`achieve.json ${params.id}`),
+        element: (
+          <PrivateRoute>
+            <Military></Military>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("../data.json"),
       },
       {
         path: "/faq",
@@ -57,6 +62,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/contact",
+        element:<Contact></Contact>
+      }
     ],
   },
 ]);

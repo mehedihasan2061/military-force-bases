@@ -13,6 +13,7 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -30,21 +31,24 @@ const Banner = () => {
         >
           <SwiperSlide>
             <img className="h-[500px] w-full" src={slider1} alt="" />
-            <div className="absolute top-24 text-white w-2/3 left-20">
-              <h1 className="text-2xl font-semibold my-6">
+            <div className="absolute top-16 md:top-24 text-white md:w-2/3 left-8 md:left-20">
+              <h1 className="md:text-2xl font-semibold md:my-6">
                 To safeguard the national borders and ensure the sovereignty and
                 territorial integrity of the nation..To be a highly trained,
                 technologically advanced force capable of responding swiftly and
                 effectively to any threat to national security.
               </h1>
-              <button
-                className="btn bg-green-600 border-0 text-white"
-                data-aos="zoom-in-up"
-                data-aos-easing="ease-in-out"
-                data-aos-duration="2000"
-              >
-                View Details
-              </button>
+              <Link to="/achieve">
+                {" "}
+                <button
+                  className="btn bg-green-600 border-0 text-white"
+                  data-aos="zoom-in-up"
+                  data-aos-easing="ease-in-out"
+                  data-aos-duration="2000"
+                >
+                  View Details
+                </button>
+              </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide>
