@@ -1,0 +1,91 @@
+
+[
+  {
+    "image": "https://i.ibb.co/BrmmBdk/FB-IMG-1576088983584.jpg",
+    "title": "Warrior's Path My Journey in the Military",
+    "segment_name": "Bangladesh Army",
+    "id": 1,
+    "description": "Fort Example is a historic military installation dating back to the 19th century. It serves as a training center for Army personnel.",
+    "price": "Free",
+    "status": "Active",
+    "area": "500 acres",
+    "location": "Example City, State, Country",
+    "facilities": ["Barracks", "Training grounds", "Mess hall", "Medical center"]
+  },
+  {
+    "image": "https://i.ibb.co/Wz6t7tK/Jarvis-transfer.jpg",
+    "title": "Naval Station Alpha",
+    "segment_name": "Navy",
+    "id": 2,
+    "description": "Naval Station Alpha is a strategic naval base located on the coast. It supports various naval operations and provides docking facilities for ships.",
+    "price": "Free",
+    "status": "Active",
+    "area": "700 acres",
+    "location": "Coastal City, State, Country",
+    "facilities": ["Ship docks", "Naval airstrip", "Training facilities", "Housing"]
+  },
+  {
+    "image": "https://i.ibb.co/b1ww1b1/Bangladesh-Air-Force-F-7-08.png",
+    "title": "Air Force Base Bravo",
+    "segment_name": "Air Force",
+    "id": 3,
+    "description": "Air Force Base Bravo is a key strategic airfield supporting aerial operations and training for the Air forces play a critical role in the defense and military strategy of a nation",
+    "price": "Free",
+    "status": "Active",
+    "area": "1000 acres",
+    "location": "Desert Region, State, Country",
+    "facilities": ["Runways", "Hangars", "Control tower", "Living quarters"]
+  },
+  {
+    "image": "https://i.ibb.co/ChKFxGb/1-332374681-947229463109075-8581992650495955263-n.jpg",
+    "title": "Marine Corps Base Delta",
+    "segment_name": "Marines",
+    "id": 4,
+    "description": "Marine Corps Base Delta is a forward-deployed military installation specializing in amphibious warfare training and operations.",
+    "price": "Free",
+    "status": "Active",
+    "area": "600 acres",
+    "location": "Island Region, State, Country",
+    "facilities": ["Amphibious assault course", "Combat training facilities", "Medical facilities", "Mess halls"]
+  },
+   {
+	"image": "https://i.ibb.co/WVNxnTK/security-election-commission-151123-002.jpg",
+      
+      "title": " Paramilitary force responsible for the border security of Bangladesh",
+      "segment_name": "Border Guard Bangladesh (BGB)",
+      "id": 5,
+      "description": "This battalion is responsible for border security and rapid response in the Alpha region.",
+      "price": "Free",
+      "status": "active",
+      "area": "North",
+      "location": 
+         "123 Border Road, Alpha Town, North Region"
+      ,
+      "facilities": [
+        "Barracks",
+        "Training Ground",
+        "Medical Unit",
+        "Armory"
+      ]
+    },
+    {
+      "image": "https://i.ibb.co/5sghrXT/images-7.jpg",
+      "title": " AGB Battalion Special Security Force ",
+      "segment_name": "AGB Battalion",
+	  "id": 6,
+      
+      "description": "This battalion ensures security and law enforcement in the Bravo region.",
+      "price": "Free",
+      "status": "active",
+      "area": "South",
+      "location":  "AGB Guard Lane, Bravo City, South Region"
+      ,
+      "facilities": [
+        "Barracks",
+        "Training Ground",
+        "Vehicle Depot",
+        "Communication Center"
+      ]
+    }
+
+]
