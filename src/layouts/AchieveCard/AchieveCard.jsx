@@ -31,10 +31,10 @@ const AchieveCard = ({ achieve }) => {
             <h1 className="md:text-2xl my-3 font-bold">{name}</h1>
             <h1 className="md:text-2xl my-3 font-bold">{title}</h1>
             <div className="flex gap-12">
-              <p className="font-bold ">Prize: {prize}</p>
+              <p className="font-bold "> Prize: {prize}</p>
               <p className="font-bold ">Date: {time}</p>
             </div>
-            <p className="py-2">{description}</p>
+            <p className="py-2 ">{description}</p>
           </div>
         </div>
       </div>
