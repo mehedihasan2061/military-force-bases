@@ -6,7 +6,7 @@ const Faq = () => {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>FAQ - Bangladesh Defence Portal</title>
+          <title> FAQ - Bangladesh Defence Portal</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
         <div className="flex justify-between bg-cyan-50 text-amber-800 w-[90%] mx-auto p-6 rounded-xl  ">
@@ -39,7 +39,7 @@ const Faq = () => {
                 <details className="w-full border rounded-lg">
                   <summary className="px-4 py-6 focus:outline-none  bg-green-100 focus-visible:dark:ring-violet-600">
                     1. What are the main branches of the Bangladesh Armed
-                    Forces?
+                     Forces?
                   </summary>
                   <p className="px-4 py-6 pt-0 ml-4 -mt-4 bg-gray-50 dark:text-gray-600">
                     The Bangladesh Armed Forces consist of three main branches:
