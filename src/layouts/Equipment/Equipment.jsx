@@ -13,7 +13,7 @@ const Equipment = () => {
     return (
       <div>
         <div>
-          <h1 className="md:text-2xl font-bold text-center my-16">
+          <h1 className="md:text-2xl font-bold text-center bg-gray-100 p-6 rounded-xl my-16">
             Equipment of Bangladesh Defence
           </h1>
         </div>
