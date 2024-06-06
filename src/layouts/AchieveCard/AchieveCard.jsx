@@ -9,7 +9,7 @@ const AchieveCard = ({ achieve }) => {
   return (
     <div>
       <Helmet>
-        <meta charSet="utf-8" />
+        <meta charSet="utf-8"/>
         <title>Achieve - Bangladesh Defence Portal</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
@@ -34,7 +34,7 @@ const AchieveCard = ({ achieve }) => {
               <p className="font-bold "> Prize: {prize}</p>
               <p className="font-bold ">Date: {time}</p>
             </div>
-            <p className="py-2 ">{description}</p>
+            <p className="py-2 "> {description} </p>
           </div>
         </div>
       </div>
