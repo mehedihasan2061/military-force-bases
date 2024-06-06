@@ -58,7 +58,6 @@ const Register = () => {
           // Profile updated!
           // ...
                })
-              // setSuccess (toast("Wow so easy!"));
               e.target.reset("")
             })
             .catch(error => {
