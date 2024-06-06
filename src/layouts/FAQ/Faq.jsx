@@ -79,7 +79,7 @@ const Faq = () => {
                     country's airspace, providing air support to ground and
                     naval forces, and conducting search and rescue missions. It
                     also plays a role in disaster response and humanitarian
-                    assistance.{" "}
+                    assistance..{" "}
                   </p>
                 </details>
               </div>
