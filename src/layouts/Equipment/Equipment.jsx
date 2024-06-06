@@ -9,7 +9,7 @@ const Equipment = () => {
             .then(res => res.json())
         .then(data => setEquipments(data))
     }, [])
-    console.log(equipments);
+    
     return (
       <div>
         <div>
