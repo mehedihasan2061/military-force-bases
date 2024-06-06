@@ -23,7 +23,7 @@ const EquipmentDetails = ({ equipment }) => {
 };
 
 EquipmentDetails.propTypes = {
-    equipment:PropTypes.object
+    equipment:PropTypes.object,
 };
 
 export default EquipmentDetails;

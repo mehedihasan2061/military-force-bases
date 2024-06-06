@@ -1,6 +1,7 @@
 # React + Vite
 
 ## Resources
+
 - Firebase
 - <h4><a href="https://reactrouter.com/en/main/start/tutorial"> React-Router-dom</a></h4>
 - <h4>tailwindcss and daisy ui</h4>
