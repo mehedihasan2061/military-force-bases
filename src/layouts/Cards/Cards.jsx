@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Cards = ({ military }) => {
-    const { id,image, title, segment_name, description, area, location} = military;
+    const { id,image, title, segment_name, description, area, location } = military;
     
     return (
       <div className="my-10 " data-aos="fade-up" data-aos-duration="2000">
@@ -21,7 +21,7 @@ const Cards = ({ military }) => {
             <div className="card-actions justify-end">
               <Link to={`military/${id}`}>
                 {" "}
-                <button className="btn btn-primary">View Details</button>
+                <button className="btn btn-primary"> View Details </button>
               </Link>
             </div>
           </div>
